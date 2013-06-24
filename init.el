@@ -28,6 +28,8 @@
 
 ;; Add in your own as you wish:
 (defvar my-packages '(color-theme-solarized
+                      git-commit-mode
+                      markdown-mode
                       starter-kit 
                       starter-kit-js 
                       starter-kit-ruby 
@@ -46,8 +48,12 @@
 
 ;;configure yaml-mode
 
-(require 'yaml-mode)
-    (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+
+(autoload 'yaml-mode "yaml-mode" "Major mode for yaml" t)
+(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+(autoload 'markdown-mode "markdown-mode" "Major mode for markdown" t)
+(add-to-list 'auto-mode-alist '("\\.markdown$" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
 
 
 ;;;; fix copy & paste when running in terminal on osx
