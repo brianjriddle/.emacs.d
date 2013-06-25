@@ -28,8 +28,10 @@
 
 ;; Add in your own as you wish:
 (defvar my-packages '(color-theme-solarized
+                      feature-mode
                       git-commit-mode
                       markdown-mode
+                      php-mode
                       starter-kit 
                       starter-kit-js 
                       starter-kit-ruby 
@@ -46,15 +48,20 @@
 
 (load-theme 'solarized-dark t)
 
-;;configure yaml-mode
+;;configure modes per file type
 
+(autoload 'feature-mode "feature-mode" "Major mode for editing cucumber/gherkin files" t)
+(add-to-list 'auto-mode-alist '("\\.feature$" . feature-mode))
 
-(autoload 'yaml-mode "yaml-mode" "Major mode for yaml" t)
-(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 (autoload 'markdown-mode "markdown-mode" "Major mode for markdown" t)
 (add-to-list 'auto-mode-alist '("\\.markdown$" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
 
+(autoload 'yaml-mode "yaml-mode" "Major mode for yaml" t)
+(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+
+(autoload 'php-mode "php-mode" "Major mode for php" t)
+(add-to-list 'auto-mode-alist '("\\.php$" . php-mode))
 
 ;;;; fix copy & paste when running in terminal on osx
 ;; from
