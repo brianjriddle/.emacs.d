@@ -1,6 +1,6 @@
 ;; global configuration
 
-(global-linum-mode t)
+;;(global-linum-mode 0)
 
 
 
@@ -90,73 +90,4 @@
 ;;;
 ;; migrated options from my vimrc
 
-;Don't wrap text (makes windows ugly)
-;set nowrap
 (setq-default truncate-lines t)
-
-
-;;;Need to be migrated from vimrc
-
-;expand tabs to spaces
-;set expandtab
-
-;"Use industry standard 4-char tabs
-;set tabstop=4 
-
-;"Use standard 4-char indentation
-;set shiftwidth=4 
-
-;set softtabstop=4
-
-;"Indent/Dedent to nearest 4-char boundary
-;set shiftround 
-
-;"indent in a smart way, instead of returning to the left margin all the time
-;set autoindent 
-
-;"highlight searches
-;set hls
-
-;"always use unix line endings
-;set fileformat=unix
-;set fileformats=unix,dos
-
-;" Enable use of the mouse for all modes
-;if has('mouse')
-;    set mouse=a
-;endif
- 
-
-;if has("autocmd")
-;  filetype plugin indent on
-;  " Load matchit (% to bounce from do to end, etc.)
-;  runtime! macros/matchit.vim
-;  augroup myfiletypes
-;    " Clear old autocmds in group
-;    autocmd!
-;    " autoindent with two spaces, always expand tabs
-;    autocmd FileType ruby,eruby,yaml,javascript set ai sw=2 sts=2 et
-;    autocmd FileType snippets set noexpandtab
-;    autocmd bufwritepost .vimrc source $MYVIMRC
-;    "set json to to javascript
-;    autocmd BufRead *.json set filetype=javascript
-;    "set to go
-;    autocmd BufRead *.go set filetype=go
-;    "Gemfile, Capfile are ruby files.
-;    autocmd BufRead Gemfile,Capfile set filetype=ruby
-;    autocmd BufNewFile,BufRead *.md,*.markdown setlocal spell spelllang=en_us
-;    autocmd BufRead COMMIT_EDITMSG setlocal spell spelllang=en_us
-;  augroup END
-;endif
-
-;" Catch trailing whitespace
-;set listchars=tab:>-,trail:·,eol:$
-
-;nmap <silent> <leader>s :set nolist!<CR>
-
-;"toggle line numbers
-;map <leader>3 :set number!<CR>
-
-;"map <F9> to reformat entire file. this also saves the current cursor
-;"position so you are right back where you started. 
-;map <F9> :let save_cursor = getpos(".")<CR> gg=G <CR> :call setpos(".", save_cursor)<CR>:echo "Buffer reformatted"<CR>
