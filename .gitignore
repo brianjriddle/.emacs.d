@@ -1,9 +1,17 @@
 *#
+*~
 .smex-items
+.last-package-update-day
 auto-save-list/
 backups/
+eln-cache
+elpa/
 elpa/
 eshell/
+network-security.data
+packages/
 places
+tc/
 tramp
 url/
+var/
